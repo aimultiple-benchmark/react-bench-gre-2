@@ -19,11 +19,33 @@
 
 .SuspenseRectsBoundaryChildren {
   pointer-events: none;
+<<<<<<< HEAD
   /**
    * So that the shadow of Boundaries within is clipped off.
    * Otherwise it would look like this boundary is further elevated.
    */
    overflow: hidden;
+=======
+}
+
+.SuspenseRectsTitle {
+  pointer-events: none;
+  color: color-mix(in srgb, var(--color-suspense) 50%, var(--color-text));
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-family: var(--font-family-sans);
+  font-size: var(--font-size-sans-small);
+  line-height: var(--line-height-data);
+  padding: 0 .25rem;
+  container-type: size;
+  container-name: title;
+}
+
+@container title (width < 30px) or (height < 18px) {
+  .SuspenseRectsTitle > span {
+    display: none;
+  }
+>>>>>>> 031595d720 ([DevTools] Title color tweak (#34927))
 }
 
 .SuspenseRectsScaledRect[data-visible='false'] > .SuspenseRectsBoundaryChildren {
